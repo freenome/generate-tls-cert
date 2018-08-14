@@ -23,7 +23,7 @@ endif
 	GOOS=darwin GOARCH=amd64 go build -o releases/$(version)/generate-tls-cert-darwin-amd64 .
 	GOOS=windows GOARCH=amd64 go build -o releases/$(version)/generate-tls-cert-windows-amd64 .
 	# these commands are not idempotent so ignore failures if an upload repeats
-	$(RELEASE) release --user kevinburke --repo generate-tls-cert --tag $(version) || true
-	$(RELEASE) upload --user kevinburke --repo generate-tls-cert --tag $(version) --name generate-tls-cert-linux-amd64 --file releases/$(version)/generate-tls-cert-linux-amd64 || true
-	$(RELEASE) upload --user kevinburke --repo generate-tls-cert --tag $(version) --name generate-tls-cert-darwin-amd64 --file releases/$(version)/generate-tls-cert-darwin-amd64 || true
-	$(RELEASE) upload --user kevinburke --repo generate-tls-cert --tag $(version) --name generate-tls-cert-windows-amd64 --file releases/$(version)/generate-tls-cert-windows-amd64 || true
+	$(RELEASE) release --user freenome --repo generate-tls-cert --tag $(version) || true
+	$(RELEASE) upload --user freenome --repo generate-tls-cert --tag $(version) --name generate-tls-cert-linux-amd64 --file releases/$(version)/generate-tls-cert-linux-amd64 || true
+	$(RELEASE) upload --user freenome --repo generate-tls-cert --tag $(version) --name generate-tls-cert-darwin-amd64 --file releases/$(version)/generate-tls-cert-darwin-amd64 || true
+	$(RELEASE) upload --user freenome --repo generate-tls-cert --tag $(version) --name generate-tls-cert-windows-amd64 --file releases/$(version)/generate-tls-cert-windows-amd64 || true
